@@ -26,6 +26,7 @@
     <Compile Include="main.py" />
     <Compile Include="module\discord_module.py" />
     <Compile Include="module\json_module.py" />
+    <Compile Include="server.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="module\" />

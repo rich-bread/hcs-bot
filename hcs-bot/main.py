@@ -2,6 +2,7 @@
 import discord
 from discord.ext import commands, tasks
 from module.json_module import open_json
+from server import keep_alive
 
 #設定ファイルを開く
 settings = open_json('appsettings.json')
@@ -23,6 +24,9 @@ async def on_ready():
 
 #Extensionを付与
 bot.load_extension("feature")
+
+#ウェブサーバーを起動
+keep_alive()
 
 #botを起動
 bot.run(token)
