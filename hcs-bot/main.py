@@ -1,4 +1,5 @@
-﻿import discord
+﻿import os
+import discord
 from discord.ext import commands, tasks
 from module.json_module import open_json
 
@@ -7,7 +8,7 @@ settings = open_json('appsettings.json')
 
 #botの情報を取得
 prefix = settings['prefix']
-token = settings['token']
+token = os.getenv('DISCORDBOT_TOKEN')
 
 #インテント有効化
 intents = discord.Intents.all()
