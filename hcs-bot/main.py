@@ -26,7 +26,9 @@ async def on_ready():
 bot.load_extension("feature")
 
 #ウェブサーバーを起動
-keep_alive()
-
-#botを起動
-bot.run(token)
+try:
+    keep_alive()
+    bot.run(token)
+except Exception as e:
+    print(e)
+    os.system("kill 1")
